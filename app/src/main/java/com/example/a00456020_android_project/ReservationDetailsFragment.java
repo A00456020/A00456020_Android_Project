@@ -13,6 +13,9 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class ReservationDetailsFragment extends Fragment {
 
     View view;
@@ -24,6 +27,8 @@ public class ReservationDetailsFragment extends Fragment {
     DatePicker checkInDateDatePicker;
     DatePicker checkOutDateDatePicker;
     Button reservationSearchButton;
+    String checkInDate, checkOutDate, customerName, customerEmail;
+    int numberOfRooms, numberOfGuests;
 
 
     @Nullable
@@ -56,9 +61,36 @@ public class ReservationDetailsFragment extends Fragment {
         reservationSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                customerName = customerNameEditText.getText().toString();
+                customerEmail = customerEmailEditText.getText().toString();
+                numberOfRooms = Integer.parseInt(numberOfRoomsEditText.getText().toString());
+                numberOfGuests = Integer.parseInt(numberOfGuestsEditText.getText().toString());
+                checkInDate = getDateFromCalendar(checkInDateDatePicker);
+                checkOutDate = getDateFromCalendar(checkOutDateDatePicker);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("check-in date", checkInDate);
+                bundle.putString("check-out date", checkOutDate);
+                bundle.putInt("number of rooms", numberOfRooms);
+                bundle.putInt("number of guests", numberOfGuests);
+                bundle.putString("customer name", customerName);
+                bundle.putString("customer email", customerEmail);
 
             }
         });
 
+    }
+
+    private String getDateFromCalendar(DatePicker datePicker){
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth();
+        int year = datePicker.getYear();
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month, day);
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(("yyyy-MM-dd"));
+
+        return simpleDateFormat.format(calendar.getTime());
     }
 }
