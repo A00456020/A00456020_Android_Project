@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">A00456020_Android_Project</string>
+    <string name="header_text">Welcome to the \nHotel Reservation System</string>
+    <string name="customer_name_text">Your Name:</string>
+    <string name="customer_name_hint">please enter your name here</string>
+    <string name="customer_email_text">Your Email:</string>
+    <string name="customer_email_hint">please enter your email here</string>
+    <string name="number_of_rooms_text">Number of rooms:</string>
+    <string name="number_of_rooms_hint">Rooms</string>
+    <string name="number_of_guests_text">Number of guests:</string>
+    <string name="number_of_guests_hint">Guests</string>
+    <string name="check_in_date_text">Check-In On:</string>
+    <string name="check_out_date_text">Check-Out On:</string>
+    <string name="search_text">Search Hotels!</string>
+
 </resources>
