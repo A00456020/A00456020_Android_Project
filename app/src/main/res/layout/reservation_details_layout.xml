@@ -44,12 +44,13 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:text="@string/customer_name_text"/>
 
             <EditText
+                android:inputType="text"
                 android:id="@+id/customer_name_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,11 +58,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/header_text_view"
                 android:layout_marginTop="20dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:hint="@string/customer_name_hint"
-                android:layout_marginStart="10dp"/>
+                android:layout_marginStart="10dp"
+                android:autofillHints="name" />
 
             <TextView
                 android:id="@+id/customer_email_text_view"
@@ -74,22 +76,24 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:text="@string/customer_email_text"/>
 
             <EditText
+                android:inputType="textEmailAddress"
                 android:id="@+id/customer_email_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="@id/customer_name_edit_text"
                 app:layout_constraintTop_toBottomOf="@+id/customer_name_edit_text"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
-                android:hint="@string/customer_email_hint"/>
+                android:hint="@string/customer_email_hint"
+                android:autofillHints="emailAddress" />
 
             <TextView
                 android:id="@+id/number_of_rooms_text_view"
@@ -101,7 +105,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:text="@string/number_of_rooms_text"/>
@@ -114,10 +118,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/customer_email_edit_text"
                 android:layout_marginStart="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
-                android:hint="@string/number_of_rooms_hint"/>
+                android:hint="@string/number_of_rooms_hint"
+                android:autofillHints="number"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/number_of_guests_text_view"
@@ -129,12 +135,13 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:text="@string/number_of_guests_text"/>
 
             <EditText
+                android:autofillHints="number"
                 android:id="@+id/number_of_guests_edit_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,10 +149,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/number_of_rooms_edit_text"
                 android:layout_marginStart="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
-                android:hint="@string/number_of_guests_hint"/>
+                android:hint="@string/number_of_guests_hint"
+                android:inputType="number" />
 
             <TextView
                 android:id="@+id/check_in_date_text_view"
@@ -157,7 +165,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:text="@string/check_in_date_text"/>
@@ -180,7 +188,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="18sp"
-                android:gravity="left"
+                android:gravity="start"
                 android:fontFamily="sans-serif-black"
                 android:textColor="@color/black"
                 android:text="@string/check_out_date_text"/>
