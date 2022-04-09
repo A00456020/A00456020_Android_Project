@@ -9,17 +9,17 @@ public class CustomerModel {
         "email": "vdpar9556@ymail.com"
     }
     */
-    String Id;
+    String id;
     String name;
     String email;
     String mobile;
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public void setId(String id) {
-        Id = id;
+        id = id;
     }
 
     public String getName() {
