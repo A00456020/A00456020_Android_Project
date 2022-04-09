@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class APIClient {
 
     public static Retrofit apiInstance;
-    public static String API_URL = "10.0.2.2:8080";
+    public static String API_URL = "http://10.0.2.2:8080/";
 
     public static Retrofit getApiInstance(){
         if (apiInstance == null){
@@ -15,7 +15,6 @@ public class APIClient {
                     .baseUrl(API_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-
         }
         return apiInstance;
     }
