@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:id="@+id/main_scroll_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sub_Constraint_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/heading_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:text= "Sample text"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/guest_details_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/heading_text_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/guest_name_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/heading_text_view"-->
+<!--                android:text="Guest Name:"-->
+<!--                android:layout_marginTop="40sp"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"/>-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/guest_name_edit_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/guest_name_text_view"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/guest_name_text_view"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+
+<!--            <RadioGroup-->
+<!--                android:id="@+id/gender_radio_group"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@id/guest_gender_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="@id/guest_gender_text_view"-->
+<!--                android:orientation="horizontal">-->
+<!--                <RadioButton android:id="@+id/radio_male"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Male"/>-->
+<!--                <RadioButton android:id="@+id/radio_female"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Female"/>-->
+<!--            </RadioGroup>-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/guest_gender_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/guest_name_text_view"-->
+<!--                android:text="Guest Gender:"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"/>-->
+
+<!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/guest_gender_edit_text"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintStart_toEndOf="@+id/guest_gender_text_view"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintBottom_toBottomOf="@id/guest_gender_text_view"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginStart="10dp"/>&ndash;&gt;-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/guest2_name_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                android:layout_marginTop="40dp"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/gender_radio_group"-->
+<!--                android:text="Guest Name:"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"/>-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/guest2_name_edit_text"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/guest_name_text_view"-->
+<!--                app:layout_constraintBottom_toBottomOf="@id/guest2_name_text_view"-->
+<!--                android:layout_marginStart="10dp"/>-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/guest2_gender_text_view"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/guest2_name_text_view"-->
+<!--                android:text="Guest Gender:"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"/>-->
+
+<!--            <RadioGroup-->
+<!--                android:id="@+id/gender2_radio_group"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toEndOf="@id/guest2_gender_text_view"-->
+<!--                app:layout_constraintTop_toTopOf="@id/guest2_gender_text_view"-->
+<!--                android:orientation="horizontal">-->
+<!--                <RadioButton android:id="@+id/radio_male2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Male"/>-->
+<!--                <RadioButton android:id="@+id/radio_female2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Female"/>-->
+<!--            </RadioGroup>-->
+
+<!--&lt;!&ndash;            <EditText&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/guest2_gender_edit_text"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintStart_toEndOf="@+id/guest_gender_text_view"&ndash;&gt;-->
+<!--&lt;!&ndash;                app:layout_constraintBottom_toBottomOf="@id/guest2_gender_text_view"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginStart="10dp"/>&ndash;&gt;-->
+
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/guest_details_recyclerView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"
+                android:text="Next"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

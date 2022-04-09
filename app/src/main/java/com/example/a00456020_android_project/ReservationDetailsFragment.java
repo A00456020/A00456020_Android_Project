@@ -81,7 +81,7 @@ public class ReservationDetailsFragment extends Fragment {
                 hotelSelectFragment.setArguments(bundle);
 
                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                fragmentTransaction.replace(R.id.main_constraint_layout, hotelSelectFragment);
+                fragmentTransaction.replace(R.id.main_frame_layout, hotelSelectFragment);
                 fragmentTransaction.remove(ReservationDetailsFragment.this);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();

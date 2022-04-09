@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">A00456020_Android_Project</string>
-    <string name="header_text">Welcome to the \nHotel Reservation System</string>
+    <string name="header_text">Welcome to the \nHotel Reservation System \n using REST API Backend.</string>
     <string name="customer_name_text">Your Name:</string>
     <string name="customer_name_hint">please enter your name here</string>
     <string name="customer_email_text">Your Email:</string>
