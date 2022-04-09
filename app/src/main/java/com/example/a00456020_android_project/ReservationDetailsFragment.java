@@ -15,7 +15,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ReservationDetailsFragment extends Fragment {
 
@@ -42,7 +47,7 @@ public class ReservationDetailsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        ArrayList<HotelModel> hotels = new ArrayList<HotelModel>();
         mainConstraintLayout = view.findViewById(R.id.main_constraint_layout);
         customerNameEditText = view.findViewById(R.id.customer_name_edit_text);
         customerEmailEditText = view.findViewById(R.id.customer_email_edit_text);
@@ -76,6 +81,23 @@ public class ReservationDetailsFragment extends Fragment {
                 bundle.putInt("number of guests", numberOfGuests);
                 bundle.putString("customer name", customerName);
                 bundle.putString("customer email", customerEmail);
+
+                APIInterface apiInterface = APIClient.getApiInstance().create(APIInterface.class);
+                Call<ArrayList<HotelModel>> hotelModelCall = apiInterface.getAllHotels();
+                hotelModelCall.enqueue(new Callback<ArrayList<HotelModel>>() {
+                    @Override
+                    public void onResponse(Call<ArrayList<HotelModel>> call, Response<ArrayList<HotelModel>> response) {
+
+                        hotels.addAll(response.body());
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<ArrayList<HotelModel>> call, Throwable t) {
+
+                    }
+
+                });
 
                 HotelSelectFragment hotelSelectFragment = new HotelSelectFragment();
                 hotelSelectFragment.setArguments(bundle);
