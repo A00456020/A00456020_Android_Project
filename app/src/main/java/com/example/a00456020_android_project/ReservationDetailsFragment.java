@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -75,6 +76,15 @@ public class ReservationDetailsFragment extends Fragment {
                 bundle.putInt("number of guests", numberOfGuests);
                 bundle.putString("customer name", customerName);
                 bundle.putString("customer email", customerEmail);
+
+                HotelSelectFragment hotelSelectFragment = new HotelSelectFragment();
+                hotelSelectFragment.setArguments(bundle);
+
+                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.main_constraint_layout, hotelSelectFragment);
+                fragmentTransaction.remove(ReservationDetailsFragment.this);
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
 
             }
         });
